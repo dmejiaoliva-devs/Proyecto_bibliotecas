@@ -1,11 +1,9 @@
-# Proyecto_bibliotecas
+# Proyecto 9: Demostración de Bibliotecas Compartidas y Carga Dinámica
 
-# Descarga y agrega la clave GPG de Microsoft
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+Este proyecto muestra cómo crear y utilizar una **biblioteca compartida (.so)** en C, y cómo cargarla **dinámicamente en tiempo de ejecución** usando las funciones del sistema (`dlopen`, `dlsym`, `dlclose`).
 
-# Habilita el repositorio de VS Code
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+## 🧩 Compilación y ejecución
 
-# Actualiza la lista de paquetes
-sudo apt update
+```bash
+make
+./build/demo
